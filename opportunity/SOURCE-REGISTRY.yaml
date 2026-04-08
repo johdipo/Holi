@@ -1,0 +1,184 @@
+version: 1
+project: "holi"
+updated_at: "2026-04-08T15:44:00Z"
+
+claims:
+  - id: C-101
+    statement: "The planning artifact merges itinerary, budget, map, and operational alerts in one manually crafted output."
+    source_type: primary_meeting
+    source_ref: "/home/isaak/.openclaw/media/inbound/file_23---d7441c4b-b456-4543-a03b-f3ebe9c6f36d"
+    source_date: "2026-04-08"
+    confidence: high
+    owner: isaak
+    notes: "Directly observable in artifact structure and sections."
+
+  - id: C-102
+    statement: "Family planning needs explicit child-age suitability and mixed-intensity activity options."
+    source_type: primary_meeting
+    source_ref: "/home/isaak/.openclaw/media/inbound/file_23---d7441c4b-b456-4543-a03b-f3ebe9c6f36d"
+    source_date: "2026-04-08"
+    confidence: high
+    owner: isaak
+    notes: "Multiple activities include age fit and accessibility notes."
+
+  - id: C-103
+    statement: "Trip quality depends on dynamic constraints (weather, closures, booking windows, water levels)."
+    source_type: primary_meeting
+    source_ref: "/home/isaak/.openclaw/media/inbound/file_23---d7441c4b-b456-4543-a03b-f3ebe9c6f36d"
+    source_date: "2026-04-08"
+    confidence: high
+    owner: isaak
+    notes: "Warnings/reservation sections and per-activity caveats show this clearly."
+
+  - id: C-104
+    statement: "Current planning workflow is high-effort and brittle because updates are manual in a long-form document."
+    source_type: estimate
+    source_ref: "artifact-derived inference"
+    source_date: "2026-04-08"
+    confidence: medium
+    owner: isaak
+    notes: "Needs explicit user interview quantification in TASK-129."
+
+  - id: C-105
+    statement: "A differentiated Holi MVP should prioritize constraint-aware ranking and family collaboration over generic itinerary text generation."
+    source_type: estimate
+    source_ref: "kickoff synthesis"
+    source_date: "2026-04-08"
+    confidence: medium
+    owner: isaak
+    notes: "To be tested against competitor capability map in TASK-130."
+
+  - id: C-106
+    statement: "There is potential value in automated reservation/risk checklisting as part of planning output."
+    source_type: primary_meeting
+    source_ref: "/home/isaak/.openclaw/media/inbound/file_23---d7441c4b-b456-4543-a03b-f3ebe9c6f36d"
+    source_date: "2026-04-08"
+    confidence: medium
+    owner: isaak
+    notes: "Artifact includes explicit reservation urgency and operational warnings."
+
+  - id: C-107
+    statement: "Maps are necessary but insufficient; users still need day-level decision support and trade-off logic."
+    source_type: estimate
+    source_ref: "artifact + product reasoning"
+    source_date: "2026-04-08"
+    confidence: medium
+    owner: isaak
+    notes: "Requires substitution analysis in TASK-130."
+
+  - id: C-108
+    statement: "Without strict MVP boundaries, Holi risks over-scoping into a full travel super-app too early."
+    source_type: estimate
+    source_ref: "kickoff scope analysis"
+    source_date: "2026-04-08"
+    confidence: medium
+    owner: isaak
+    notes: "Tracked as high-risk assumption in ASSUMPTIONS.md."
+
+  - id: C-109
+    statement: "Families with kids are the highest-confidence lead segment for Holi based on currently available primary evidence."
+    source_type: primary_meeting
+    source_ref: "/home/isaak/.openclaw/media/inbound/file_23---d7441c4b-b456-4543-a03b-f3ebe9c6f36d"
+    source_date: "2026-04-08"
+    confidence: medium
+    owner: isaak
+    notes: "Derived from explicit child-fit and operational constraint patterns in source artifact; documented in USER-PROBLEM-SEGMENTATION.md."
+
+  - id: C-110
+    statement: "Cross-segment core pain appears to be constraint fragmentation rather than absence of destination ideas."
+    source_type: estimate
+    source_ref: "TASK-129 synthesis"
+    source_date: "2026-04-08"
+    confidence: medium
+    owner: isaak
+    notes: "Needs external benchmark validation in TASK-130."
+
+  - id: C-111
+    statement: "Friend groups are a credible secondary segment due to coordination and preference-alignment friction."
+    source_type: estimate
+    source_ref: "TASK-129 segmentation model"
+    source_date: "2026-04-08"
+    confidence: medium
+    owner: isaak
+    notes: "No direct interview evidence yet; keep as secondary and validate later."
+
+  - id: C-112
+    statement: "External web evidence retrieval is currently blocked in environment due to missing Brave API key."
+    source_type: verified_public
+    source_ref: "web_search tool runtime error: missing_brave_api_key"
+    source_date: "2026-04-08"
+    confidence: high
+    owner: isaak
+    notes: "Tracked in sources-verified.md; impacts confidence of external quantitative claims."
+
+  - id: C-113
+    statement: "Travel planning competitors publicly position around unified itinerary + map workflows (e.g., Wanderlog, Sygic, Roadtrippers)."
+    source_type: verified_public
+    source_ref: "https://wanderlog.com; https://www.sygic.com/travel; https://roadtrippers.com"
+    source_date: "2026-04-08"
+    confidence: high
+    owner: isaak
+    notes: "Verified via web_fetch homepage positioning text."
+
+  - id: C-114
+    statement: "Maps platforms are strong substitutes for POI discovery/navigation but do not present themselves as full collaborative constraint planners."
+    source_type: verified_public
+    source_ref: "https://www.google.com/maps; https://maps.me"
+    source_date: "2026-04-08"
+    confidence: medium
+    owner: isaak
+    notes: "Positioning-level inference from reachable public pages; feature-depth claim kept conservative."
+
+  - id: C-115
+    statement: "Guide/content players optimize inspiration and destination content rather than end-to-end daily constraint arbitration."
+    source_type: estimate
+    source_ref: "https://www.lonelyplanet.com; https://www.alltrails.com"
+    source_date: "2026-04-08"
+    confidence: medium
+    owner: isaak
+    notes: "Strategic interpretation from product positioning; requires UX benchmarking later."
+
+  - id: C-116
+    statement: "AI travel assistants emphasize conversational planning speed, increasing substitution risk for generic itinerary generation."
+    source_type: verified_public
+    source_ref: "https://chatgpt.com; https://guidegeek.com"
+    source_date: "2026-04-08"
+    confidence: high
+    owner: isaak
+    notes: "Both pages position around fast personalized responses/planning via chat."
+
+  - id: C-117
+    statement: "Holi differentiation is viable only with a constraint-first collaborative wedge, not as a generic itinerary writer."
+    source_type: estimate
+    source_ref: "TASK-130 synthesis"
+    source_date: "2026-04-08"
+    confidence: medium
+    owner: isaak
+    notes: "Decision-oriented synthesis across C-109..C-116."
+
+  - id: C-118
+    statement: "A manual multi-tool stack (maps + guides + AI + booking apps) is a real-world substitute that creates cognitive load for trip organizers."
+    source_type: estimate
+    source_ref: "TASK-129 + TASK-130 synthesis"
+    source_date: "2026-04-08"
+    confidence: medium
+    owner: isaak
+    notes: "Directly aligned with inbound planning artifact complexity patterns."
+
+  - id: C-119
+    statement: "Multiple major travel websites are partially blocked to automated retrieval (anti-bot/JS), limiting confidence for detailed competitor feature claims."
+    source_type: verified_public
+    source_ref: "web_fetch statuses: tripadvisor(403), rome2rio(403), getyourguide(403), booking(202 anti-bot)"
+    source_date: "2026-04-08"
+    confidence: high
+    owner: isaak
+    notes: "Limitation explicitly documented in sources-verified.md."
+
+  - id: C-120
+    statement: "Proceeding to product design (TASK-131) is justified if MVP scope explicitly excludes non-wedge generic planning features."
+    source_type: estimate
+    source_ref: "TASK-130 verdict"
+    source_date: "2026-04-08"
+    confidence: medium
+    owner: isaak
+    notes: "Conditional go recommendation tied to kill-list discipline."
