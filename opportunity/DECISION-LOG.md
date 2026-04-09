@@ -65,3 +65,14 @@
 - **Evidence refs:** C-117, C-118, C-120, C-121, C-122, C-123
 - **Impact on scope/timeline:** Keeps TASK-132/133 focused on validating monetization and feasibility of one coherent loop.
 - **Revisit condition (if any):** Revisit if onboarding/QCM completion or group convergence metrics fail in prototype tests.
+
+### 2026-04-09 — Feasibility/compliance sequencing lock (TASK-133)
+- **Decision:** Keep collaboration real-time in core path; treat continuous geolocation as opt-in bounded Travel Mode; sequence integrations Telegram-first, then WhatsApp; defer Email Agent to V2 with strict consent/opt-out governance.
+- **Options considered:**
+  1. Ship all channels + background location in V1
+  2. Progressive rollout with compliance guardrails (selected)
+  3. Remove location/messaging capabilities entirely
+- **Why chosen:** Preserves value wedge while reducing policy/privacy rejection risk and operational complexity.
+- **Evidence refs:** C-124, C-125, C-126, C-127, C-128, C-130, C-131, C-132, C-133
+- **Impact on scope/timeline:** Clarifies implementation phases for TASK-134 and final recommendation in TASK-135.
+- **Revisit condition (if any):** Revisit if prototype data shows low user value for Travel Mode alerts or if messaging channel adoption is weak.

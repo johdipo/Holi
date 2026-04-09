@@ -42,8 +42,29 @@ Date: 2026-04-08
 - No new external factual URLs required; TASK-131 is a design synthesis constrained by prior verified evidence.
 - Claims introduced in TASK-131 are explicitly tagged as `estimate` in `SOURCE-REGISTRY.yaml` (C-121..C-123).
 
+## TASK-133 URL audit (faisabilité + conformité)
+
+### Reachable (used)
+- https://supabase.com/docs/guides/realtime (200)
+- https://firebase.google.com/docs/firestore/real-time_queries_at_scale (200)
+- https://support.google.com/googleplay/android-developer/answer/9799150?hl=en (200)
+- https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/legal-grounds-processing-data/grounds-processing/what-if-somebody-withdraws-their-consent_en (200)
+- https://core.telegram.org/bots/api (200)
+- https://www.twilio.com/docs/whatsapp/tutorial/send-and-receive-media-messages-whatsapp-nodejs (200)
+- https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business (200)
+- https://support.google.com/accounts/answer/3467281?hl=en (200)
+- https://www.eff.org/issues/location-privacy (200)
+- https://developer.apple.com/documentation/corelocation/handling-location-updates-in-the-background (200, extraction limité)
+- https://developer.apple.com/documentation/bundleresources/information-property-list/nslocationalwaysandwheninuseusagedescription (200, extraction limité)
+
+### Unreachable / blocked (not used for factual claims)
+- https://developers.facebook.com/docs/whatsapp/cloud-api/overview (error payload)
+- https://www.whatsapp.com/legal/business-policy/ (error payload)
+- https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng (extraction failed)
+
 ## Usage discipline
 - Any precise quantitative market/product claim not directly verifiable from above is tagged as estimate in `SOURCE-REGISTRY.yaml`.
 - TASK-130 verdict relies on:
   - verified public positioning statements (website headlines/features), and
   - explicit strategic estimates with medium confidence.
+- TASK-133 compliance synthesis uses official docs when extractable; when tooling returns title-only/partial extracts, confidence is lowered and claims are framed conservatively.

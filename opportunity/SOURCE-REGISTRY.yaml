@@ -209,3 +209,93 @@ claims:
     confidence: medium
     owner: isaak
     notes: "Interaction pattern choice pending empirical UX validation."
+
+  - id: C-124
+    statement: "Supabase Realtime publicly positions low-latency Broadcast/Presence/Postgres Changes for collaborative real-time app patterns."
+    source_type: verified_public
+    source_ref: "https://supabase.com/docs/guides/realtime"
+    source_date: "2026-04-09"
+    confidence: high
+    owner: isaak
+    notes: "Used as feasibility evidence for collaboration/event sync layer."
+
+  - id: C-125
+    statement: "Firestore real-time listener architecture scales with region placement and long-lived client connections, with latency sensitivity to user/database distance."
+    source_type: verified_public
+    source_ref: "https://firebase.google.com/docs/firestore/real-time_queries_at_scale"
+    source_date: "2026-04-09"
+    confidence: high
+    owner: isaak
+    notes: "Used as architecture constraint reference for collaboration module."
+
+  - id: C-126
+    statement: "Apple documentation explicitly defines location usage-description keys and background location handling paths, implying explicit permission disclosure requirements."
+    source_type: verified_public
+    source_ref: "https://developer.apple.com/documentation/bundleresources/information-property-list/nslocationalwaysandwheninuseusagedescription; https://developer.apple.com/documentation/corelocation/handling-location-updates-in-the-background"
+    source_date: "2026-04-09"
+    confidence: medium
+    owner: isaak
+    notes: "Retriever yields title-level content but confirms relevant official documentation endpoints."
+
+  - id: C-127
+    statement: "Google Play policy guidance states background location should be requested only when required for core app functionality and with supporting disclosure/documentation."
+    source_type: verified_public
+    source_ref: "https://support.google.com/googleplay/android-developer/answer/9799150?hl=en"
+    source_date: "2026-04-09"
+    confidence: high
+    owner: isaak
+    notes: "Directly used for go/no-go constraints on continuous location in V1."
+
+  - id: C-128
+    statement: "GDPR consent withdrawal must be as easy as consent grant, and data processing based on consent must stop when consent is withdrawn unless another legal basis applies."
+    source_type: verified_public
+    source_ref: "https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/legal-grounds-processing-data/grounds-processing/what-if-somebody-withdraws-their-consent_en"
+    source_date: "2026-04-09"
+    confidence: high
+    owner: isaak
+    notes: "Used for location and email consent governance requirements."
+
+  - id: C-129
+    statement: "Location data can enable high-granularity behavioral tracking and creates elevated privacy risk if collected continuously."
+    source_type: verified_public
+    source_ref: "https://www.eff.org/issues/location-privacy"
+    source_date: "2026-04-09"
+    confidence: medium
+    owner: isaak
+    notes: "Advocacy source; treated as risk framing support, not legal authority."
+
+  - id: C-130
+    statement: "Telegram Bot API is an HTTP-based interface suitable for bot-driven messaging integrations."
+    source_type: verified_public
+    source_ref: "https://core.telegram.org/bots/api"
+    source_date: "2026-04-09"
+    confidence: high
+    owner: isaak
+    notes: "Supports feasibility assessment for Telegram integration lane."
+
+  - id: C-131
+    statement: "WhatsApp integration via Twilio supports rapid prototyping through sandbox before production setup."
+    source_type: verified_public
+    source_ref: "https://www.twilio.com/docs/whatsapp/tutorial/send-and-receive-media-messages-whatsapp-nodejs"
+    source_date: "2026-04-09"
+    confidence: medium
+    owner: isaak
+    notes: "Third-party integration path evidence; Meta official docs were partially inaccessible in this environment."
+
+  - id: C-132
+    statement: "CAN-SPAM compliance requires truthful headers/subjects, sender identification, physical address, and effective unsubscribe handling for commercial email."
+    source_type: verified_public
+    source_ref: "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business"
+    source_date: "2026-04-09"
+    confidence: high
+    owner: isaak
+    notes: "US-centric baseline; EU obligations remain governed by GDPR/ePrivacy context."
+
+  - id: C-133
+    statement: "Android user-level location settings and app-specific permissions are explicit user controls, reinforcing opt-in/opt-out UX requirements for location features."
+    source_type: verified_public
+    source_ref: "https://support.google.com/accounts/answer/3467281?hl=en"
+    source_date: "2026-04-09"
+    confidence: medium
+    owner: isaak
+    notes: "Used as UX-control support signal for location governance model."
