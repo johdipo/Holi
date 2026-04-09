@@ -15,3 +15,5 @@
 | A-106 | Users will opt-in to bounded Travel Mode geolocation if value is immediate and controls are explicit (pause/expiry) | H | Prototype test: opt-in rate + retention + permission drop-off analytics | 2026-04-20 | open |
 | A-107 | Telegram-first messaging creates execution value before WhatsApp integration complexity is justified | M | Pilot with Telegram alert CTR/action completion vs in-app only baseline | 2026-04-22 | open |
 | A-108 | Email agent can increase trip execution quality without being perceived as spam if strictly event-driven and low-frequency | M | A/B test digest relevance score + unsubscribe rate threshold | 2026-04-25 | open |
+| A-109 | A hybrid model (freemium + contextual affiliation) will monetize earlier than subscription-only without hurting product trust | H | 8-week pilot: affiliate CTR/CVR + retention/NPS delta between monetized and non-monetized cohorts | 2026-05-20 | open |
+| A-110 | POI sponsorisation can be introduced without degrading recommendation trust if capped and clearly disclosed | H | Controlled experiment: sponsor density threshold vs trust score/drop-off | 2026-06-01 | open |

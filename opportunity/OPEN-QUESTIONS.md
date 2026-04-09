@@ -27,6 +27,14 @@
   - Why it matters: Should Email Agent V2 be purely transactional first, or include optional recommendation content from day 1?
   - Owner: Johan
   - Deadline: 2026-04-25
+- Q-117:
+  - Why it matters: Which affiliate partner stack is priority for V1 pilot (activities-first vs lodging-first) given anti-bot data limitations?
+  - Owner: Johan
+  - Deadline: 2026-04-18
+- Q-118:
+  - Why it matters: What is the acceptable commercial density threshold (affiliate/sponsor cards) before trust and completion metrics degrade?
+  - Owner: Isaak
+  - Deadline: 2026-04-22
 
 ## Resolved log
 - 2026-04-09: Q-111 resolved by TASK-133 — real-time domain narrowed to collaborative arbitration events; static snapshots remain default for non-critical data.

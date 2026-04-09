@@ -1,6 +1,6 @@
 version: 1
 project: "holi"
-updated_at: "2026-04-09T14:33:00Z"
+updated_at: "2026-04-09T15:33:00Z"
 
 claims:
   - id: C-101
@@ -299,3 +299,66 @@ claims:
     confidence: medium
     owner: isaak
     notes: "Used as UX-control support signal for location governance model."
+
+  - id: C-134
+    statement: "GetYourGuide publicly positions an affiliate model (\"Travel Affiliate Program - Make Money while travelling\"), supporting feasibility of activity-booking affiliate monetization for Holi."
+    source_type: verified_public
+    source_ref: "https://partner.getyourguide.com/"
+    source_date: "2026-04-09"
+    confidence: medium
+    owner: isaak
+    notes: "Title-level extract only in current environment; treated as directional evidence."
+
+  - id: C-135
+    statement: "Google Play policy requires Play billing for in-app digital content/features/subscriptions, constraining freemium and premium implementation choices."
+    source_type: verified_public
+    source_ref: "https://support.google.com/googleplay/android-developer/answer/9858738?hl=en"
+    source_date: "2026-04-09"
+    confidence: high
+    owner: isaak
+    notes: "Used to enforce store-compliant monetization architecture."
+
+  - id: C-136
+    statement: "Apple App Store review framework includes business/payment compliance constraints that must be respected in monetization design."
+    source_type: verified_public
+    source_ref: "https://developer.apple.com/app-store/review/guidelines/#payments"
+    source_date: "2026-04-09"
+    confidence: medium
+    owner: isaak
+    notes: "Retriever output is partial/truncated; claim kept conservative and non-numeric."
+
+  - id: C-137
+    statement: "Statista topical summary describes the online travel segment as large and still growing, supporting a sufficiently large monetizable context for digital trip-planning products."
+    source_type: verified_public
+    source_ref: "https://www.statista.com/topics/2704/online-travel-market/"
+    source_date: "2026-04-09"
+    confidence: medium
+    owner: isaak
+    notes: "Secondary source; used only as market context, not as precise financial baseline."
+
+  - id: C-138
+    statement: "trivago positions itself around comparing hotel prices from multiple partner sites, indicating partner-referral economics remain an active travel model."
+    source_type: verified_public
+    source_ref: "https://www.trivago.com/advertising"
+    source_date: "2026-04-09"
+    confidence: medium
+    owner: isaak
+    notes: "Evidence is positioning-level; not used for take-rate or margin claims."
+
+  - id: C-139
+    statement: "Major travel sites (Booking/Tripadvisor and others) remain partially blocked to automated retrieval, limiting precision of public benchmark extraction in this environment."
+    source_type: verified_public
+    source_ref: "web_fetch status log: booking(202 challenge), tripadvisor(403), expedia(403), skyscanner(captcha redirect)"
+    source_date: "2026-04-09"
+    confidence: high
+    owner: isaak
+    notes: "Methodological limitation carried forward into confidence scoring."
+
+  - id: C-140
+    statement: "Google Ads business positioning highlights travel-relevant performance marketing mechanics (search intent capture, conversion tracking, budget control), supporting feasibility of sponsored distribution channels for travel offers."
+    source_type: verified_public
+    source_ref: "https://ads.google.com/intl/en_ch/home/resources/articles/travel-marketing/"
+    source_date: "2026-04-09"
+    confidence: medium
+    owner: isaak
+    notes: "Fetched page redirects to Google Ads business page; used as directional signal only."

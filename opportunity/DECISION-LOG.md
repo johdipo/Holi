@@ -76,3 +76,14 @@
 - **Evidence refs:** C-124, C-125, C-126, C-127, C-128, C-130, C-131, C-132, C-133
 - **Impact on scope/timeline:** Clarifies implementation phases for TASK-134 and final recommendation in TASK-135.
 - **Revisit condition (if any):** Revisit if prototype data shows low user value for Travel Mode alerts or if messaging channel adoption is weak.
+
+### 2026-04-09 — Monetization stack lock (TASK-132)
+- **Decision:** Adopt a phased model: V1 freemium + contextual affiliation; defer POI sponsorisation to controlled experiments; design premium architecture early for recurring revenue.
+- **Options considered:**
+  1. Subscription-first immediately
+  2. Affiliation-first only
+  3. Hybrid phased stack (selected)
+- **Why chosen:** Hybrid model monetizes early while preserving trust and keeps long-term margin path via premium.
+- **Evidence refs:** C-117, C-118, C-134, C-135, C-136, C-138, C-139, C-140
+- **Impact on scope/timeline:** Unblocks TASK-134 with explicit business model assumptions and risk controls.
+- **Revisit condition (if any):** Revisit after first pilot metrics on affiliate conversion, trust/NPS drift, and premium conversion baseline.

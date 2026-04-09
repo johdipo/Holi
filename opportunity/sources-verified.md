@@ -62,9 +62,28 @@ Date: 2026-04-08
 - https://www.whatsapp.com/legal/business-policy/ (error payload)
 - https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng (extraction failed)
 
+## TASK-132 URL audit (business model + monetization)
+
+### Reachable (used)
+- https://partner.getyourguide.com/ (200, title-level extraction)
+- https://support.google.com/googleplay/android-developer/answer/9858738?hl=en (200)
+- https://developer.apple.com/app-store/review/guidelines/#payments (200, extraction partielle)
+- https://www.statista.com/topics/2704/online-travel-market/ (200)
+- https://www.trivago.com/advertising (200)
+- https://ads.google.com/intl/en_ch/home/resources/articles/travel-marketing/ (200, redirected)
+
+### Unreachable / blocked (not used for detailed factual claims)
+- https://www.booking.com/affiliate-program/v2/index.en-gb.html (202 + anti-bot challenge)
+- https://www.booking.com/content/affiliate-program.en-gb.html (202 + anti-bot challenge)
+- https://www.tripadvisor.com/affiliates (403)
+- https://www.tripadvisor.com/MediaKit (403)
+- https://www.expediagroup.com/affiliates/ (403)
+- https://www.skyscanner.net/affiliates (captcha redirect)
+
 ## Usage discipline
 - Any precise quantitative market/product claim not directly verifiable from above is tagged as estimate in `SOURCE-REGISTRY.yaml`.
 - TASK-130 verdict relies on:
   - verified public positioning statements (website headlines/features), and
   - explicit strategic estimates with medium confidence.
 - TASK-133 compliance synthesis uses official docs when extractable; when tooling returns title-only/partial extracts, confidence is lowered and claims are framed conservatively.
+- TASK-132 monetization synthesis is intentionally conservative: partner economics are framed qualitatively unless directly verifiable in current environment.
