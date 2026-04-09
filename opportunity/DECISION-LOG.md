@@ -87,3 +87,14 @@
 - **Evidence refs:** C-117, C-118, C-134, C-135, C-136, C-138, C-139, C-140
 - **Impact on scope/timeline:** Unblocks TASK-134 with explicit business model assumptions and risk controls.
 - **Revisit condition (if any):** Revisit after first pilot metrics on affiliate conversion, trust/NPS drift, and premium conversion baseline.
+
+### 2026-04-09 — Whitepaper v1 assembly decision (TASK-134)
+- **Decision:** Publish a consolidated decision-grade whitepaper (`WHITEPAPER-V1.md`) plus a dedicated sources/assumptions annex (`WHITEPAPER-V1-ANNEX-SOURCES.md`) as baseline for final recommendation task.
+- **Options considered:**
+  1. Keep fragmented docs only
+  2. Build whitepaper without annex
+  3. Build whitepaper + traceability annex (selected)
+- **Why chosen:** TASK-135 needs a single coherent narrative with explicit traceability and uncertainty markers, not a set of disconnected files.
+- **Evidence refs:** C-101..C-140, A-101..A-110
+- **Impact on scope/timeline:** Moves project from analysis fragments to integrated decision package; directly unblocks TASK-135.
+- **Revisit condition (if any):** Revisit if Johan requests alternate packaging (e.g., 3-format final pack in TASK-138 priority).
