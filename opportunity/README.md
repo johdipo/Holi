@@ -19,3 +19,14 @@ Instantiated from `frameworks/opportunity-v1` for the Holi travel-planning oppor
 - `OPEN-QUESTIONS.md`
 - `CHANGE-RATIONALE.md`
 - `TASK-PLAN.md`
+
+## Review HTML + Metadata Discipline
+
+- After **every completed task**, refresh `index.html` review pack in the Holi repo so Johan can review progress continuously.
+- Keep visible output concise, but maintain rich metadata evidence in:
+  - `SOURCE-REGISTRY.yaml`
+  - `DECISION-LOG.md`
+  - `ASSUMPTIONS.md`
+  - `OPEN-QUESTIONS.md`
+  - `CHANGE-RATIONALE.md`
+- Any strategic claim in visible docs must be traceable to one of these metadata artifacts.

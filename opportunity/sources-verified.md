@@ -38,6 +38,10 @@ Date: 2026-04-08
 - https://www.getyourguide.com (403)
 - https://www.booking.com (202 + anti-bot payload)
 
+## TASK-131 evidence base (product design)
+- No new external factual URLs required; TASK-131 is a design synthesis constrained by prior verified evidence.
+- Claims introduced in TASK-131 are explicitly tagged as `estimate` in `SOURCE-REGISTRY.yaml` (C-121..C-123).
+
 ## Usage discipline
 - Any precise quantitative market/product claim not directly verifiable from above is tagged as estimate in `SOURCE-REGISTRY.yaml`.
 - TASK-130 verdict relies on:

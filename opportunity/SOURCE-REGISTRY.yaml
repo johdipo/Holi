@@ -1,6 +1,6 @@
 version: 1
 project: "holi"
-updated_at: "2026-04-08T15:44:00Z"
+updated_at: "2026-04-09T14:33:00Z"
 
 claims:
   - id: C-101
@@ -182,3 +182,30 @@ claims:
     confidence: medium
     owner: isaak
     notes: "Conditional go recommendation tied to kill-list discipline."
+
+  - id: C-121
+    statement: "A two-mode UX (Planning mode + Travel mode) is necessary to preserve plan quality before trip and adaptability during trip execution."
+    source_type: estimate
+    source_ref: "TASK-131 product synthesis from C-103, C-109, C-117"
+    source_date: "2026-04-09"
+    confidence: medium
+    owner: isaak
+    notes: "Design hypothesis for volatility handling; validation deferred to TASK-133 feasibility and later user tests."
+
+  - id: C-122
+    statement: "A bounded chatbot tied to explicit constraints is less commoditizable than generic open-ended trip chat."
+    source_type: estimate
+    source_ref: "TASK-131 product synthesis from C-116, C-117"
+    source_date: "2026-04-09"
+    confidence: medium
+    owner: isaak
+    notes: "Strategic product hypothesis; monetization and differentiation confirmation required in TASK-132."
+
+  - id: C-123
+    statement: "Collaborative swipe with explicit consensus/conflict signals is a practical V1 mechanism for reducing planning arbitration overhead in groups."
+    source_type: estimate
+    source_ref: "TASK-131 product synthesis from C-111, C-118"
+    source_date: "2026-04-09"
+    confidence: medium
+    owner: isaak
+    notes: "Interaction pattern choice pending empirical UX validation."

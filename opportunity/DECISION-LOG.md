@@ -54,3 +54,14 @@
 - **Evidence refs:** C-113, C-114, C-115, C-116, C-117, C-118
 - **Impact on scope/timeline:** TASK-131 must include a clear MVP kill-list; avoids me-too product direction.
 - **Revisit condition (if any):** Revisit if monetization tests (TASK-132) fail to show willingness-to-pay for wedge capabilities.
+
+### 2026-04-09 — Product V1 scope lock (TASK-131)
+- **Decision:** Lock V1 to five modules only: onboarding+QCM, collaborative swipe arbitration, planning mode, travel mode, bounded chatbot; enforce explicit kill-list (no booking, no generic AI planner, no social feed).
+- **Options considered:**
+  1. Broad “all-in-one” travel app MVP
+  2. Narrow wedge MVP with collaboration + constraints (selected)
+  3. Chatbot-first MVP without collaborative layer
+- **Why chosen:** Preserves the only defendable differentiation path identified in TASK-130 while reducing overbuild risk.
+- **Evidence refs:** C-117, C-118, C-120, C-121, C-122, C-123
+- **Impact on scope/timeline:** Keeps TASK-132/133 focused on validating monetization and feasibility of one coherent loop.
+- **Revisit condition (if any):** Revisit if onboarding/QCM completion or group convergence metrics fail in prototype tests.
