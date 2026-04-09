@@ -98,3 +98,5 @@
 - **Evidence refs:** C-101..C-140, A-101..A-110
 - **Impact on scope/timeline:** Moves project from analysis fragments to integrated decision package; directly unblocks TASK-135.
 - **Revisit condition (if any):** Revisit if Johan requests alternate packaging (e.g., 3-format final pack in TASK-138 priority).
+
+- 2026-04-09 (TASK-135): **Decision = GO POC cadré 8 semaines** avec gates explicites (activation, collaboration, monétisation, satisfaction) puis go/no-go strict.

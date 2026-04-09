@@ -42,3 +42,5 @@
 - 2026-04-08: Q-100 resolved by TASK-128 — inbound HTML artifact confirmed as kickoff evidence base.
 - 2026-04-08: Q-101 resolved by TASK-129 — segment priority fixed to S1 (families with kids), S4 retained as secondary validation segment.
 - 2026-04-08: Q-103 resolved by TASK-130 — differentiation verdict set to conditional go (constraint-first collaborative wedge only).
+
+- OQ-121 (TASK-135): Quel seuil de volume minimal rend un KPI d’affiliation statistiquement exploitable en 8 semaines ?

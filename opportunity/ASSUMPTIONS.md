@@ -17,3 +17,5 @@
 | A-108 | Email agent can increase trip execution quality without being perceived as spam if strictly event-driven and low-frequency | M | A/B test digest relevance score + unsubscribe rate threshold | 2026-04-25 | open |
 | A-109 | A hybrid model (freemium + contextual affiliation) will monetize earlier than subscription-only without hurting product trust | H | 8-week pilot: affiliate CTR/CVR + retention/NPS delta between monetized and non-monetized cohorts | 2026-05-20 | open |
 | A-110 | POI sponsorisation can be introduced without degrading recommendation trust if capped and clearly disclosed | H | Controlled experiment: sponsor density threshold vs trust score/drop-off | 2026-06-01 | open |
+
+- A-111 (TASK-135): Un POC centré collaboration (sans géoloc continue) suffit pour valider la valeur cœur avant d’élargir le scope.
