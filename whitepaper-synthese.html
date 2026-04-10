@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Holi — Whitepaper Synthèse (v1)</title>
+  <meta name="description" content="Synthèse décisionnelle Holi avec table des matières navigable et références inline lisibles.">
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --bg-alt: #f5f5f0;
+      --text: #1a1a1a;
+      --muted: #6b6b6b;
+      --accent: #2563eb;
+      --border: #e5e5e0;
+      --max: 780px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.75}
+    .hero{background:linear-gradient(135deg,#1e293b,#0f172a);color:#fff;padding:64px 20px 52px;text-align:center}
+    .hero h1{margin:0 0 10px;font-size:clamp(2rem,4vw,2.7rem)}
+    .hero p{margin:0 auto;max-width:720px;color:#cbd5e1}
+    .container{max-width:var(--max);margin:0 auto;padding:0 22px}
+    .meta{margin-top:12px;font-size:.9rem;color:#94a3b8}
+    .toc{background:var(--bg-alt);border:1px solid var(--border);border-radius:12px;padding:24px;margin:36px auto}
+    .toc h2{margin:0 0 14px;font-size:1rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+    .toc ol{margin:0;padding-left:20px}
+    .toc li{margin:6px 0}
+    .toc a{color:var(--text);text-decoration:none}
+    .toc a:hover{color:var(--accent);text-decoration:underline}
+    section{padding:36px 0;border-bottom:1px solid var(--border)}
+    section:last-of-type{border-bottom:none}
+    h2{font-size:1.7rem;margin:0 0 18px}
+    h3{font-size:1.15rem;margin:26px 0 10px}
+    p,li{font-size:1.02rem}
+    ul,ol{margin:0 0 14px 24px}
+    a{color:var(--accent)}
+    .callout{border-left:4px solid var(--accent);background:#eef4ff;padding:12px 14px;border-radius:8px;margin:14px 0}
+    .inline-ref{font-size:.82em;vertical-align:super;white-space:nowrap}
+    .refs{font-size:.95rem}
+    .refs li{margin:10px 0}
+    .small{font-size:.9rem;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>Holi — Whitepaper Synthèse</h1>
+    <p>Version de lecture décisionnelle unique, structurée comme le whitepaper Holi, avec table des matières et références inline résolues.</p>
+    <div class="meta">Date: 2026-04-10 · Projet: Holi · Version: synthese-v1</div>
+  </header>
+
+  <main class="container">
+    <nav class="toc" aria-label="Table des matières">
+      <h2>Table des matières</h2>
+      <ol>
+        <li><a href="#executive-summary">Executive summary</a></li>
+        <li><a href="#probleme-segment">Problème utilisateur et segment cible</a></li>
+        <li><a href="#marche-concurrence">Marché, concurrence et substituts</a></li>
+        <li><a href="#produit-v1">Proposition de valeur et produit V1</a></li>
+        <li><a href="#business-model">Modèle business et monétisation</a></li>
+        <li><a href="#faisabilite-conformite">Faisabilité technique et conformité</a></li>
+        <li><a href="#risques">Risques majeurs</a></li>
+        <li><a href="#hypotheses">Hypothèses critiques à valider</a></li>
+        <li><a href="#decision">Décision et gates du POC</a></li>
+        <li><a href="#references">Références</a></li>
+      </ol>
+    </nav>
+
+    <section id="executive-summary">
+      <h2>0) Executive summary</h2>
+      <p>Holi adresse un problème concret: transformer une planification voyage familiale/groupe fragmentée en plan journalier exécutable et adaptable<span class="inline-ref">[<a href="#r1">R1</a>]</span>. Le verdict opérationnel reste <strong>GO conditionnel</strong>, avec discipline de scope et validation métrique stricte.</p>
+      <div class="callout"><strong>Thèse produit:</strong> Holi doit rester <em>constraint-first + collaborative arbitration</em>, sinon le produit devient un planner générique facilement substituable<span class="inline-ref">[<a href="#r2">R2</a>]</span>.</div>
+    </section>
+
+    <section id="probleme-segment">
+      <h2>1) Problème utilisateur et segment cible</h2>
+      <h3>1.1 Problème central</h3>
+      <p>La friction principale observée n’est pas l’inspiration destination, mais la fragmentation des contraintes et l’arbitrage collectif (enfants, timing, météo, énergie, fermetures)<span class="inline-ref">[<a href="#r1">R1</a>]</span>.</p>
+      <h3>1.2 Segment prioritaire</h3>
+      <ul>
+        <li><strong>Prioritaire:</strong> familles avec enfants (densité de contraintes la plus forte)<span class="inline-ref">[<a href="#r3">R3</a>]</span>.</li>
+        <li><strong>Secondaire:</strong> groupes d’amis (alignement de préférences et coordination)<span class="inline-ref">[<a href="#r4">R4</a>]</span>.</li>
+      </ul>
+      <h3>1.3 JTBD</h3>
+      <p>« Aidez-nous à converger vite vers un plan du jour faisable pour tout le groupe, avec plan de secours quand la réalité change. »</p>
+    </section>
+
+    <section id="marche-concurrence">
+      <h2>2) Marché, concurrence et substituts</h2>
+      <ul>
+        <li>Les planificateurs existants couvrent déjà une part du besoin (Wanderlog, Roadtrippers, Sygic)<span class="inline-ref">[<a href="#r5">R5</a>]</span>.</li>
+        <li>Les plateformes cartes sont des substituts puissants pour découverte/navigation, mais pas pour arbitrage collaboratif explicite<span class="inline-ref">[<a href="#r6">R6</a>]</span>.</li>
+        <li>Les assistants IA accélèrent la génération d’itinéraires et augmentent le risque de commoditisation<span class="inline-ref">[<a href="#r7">R7</a>]</span>.</li>
+      </ul>
+      <p>Implication: Holi gagne uniquement avec un wedge clairement défendable et une exécution orientée contraintes réelles<span class="inline-ref">[<a href="#r2">R2</a>]</span>.</p>
+    </section>
+
+    <section id="produit-v1">
+      <h2>3) Proposition de valeur et produit V1</h2>
+      <p>Holi convertit des contraintes hétérogènes en plan journalier partagé et replanifiable.</p>
+      <h3>In-scope V1</h3>
+      <ol>
+        <li>Onboarding + profil voyage</li>
+        <li>QCM contraintes hard/soft</li>
+        <li>Swipe collaboratif + signal consensus/conflit</li>
+        <li>Modes Planning / Travel</li>
+        <li>Chatbot borné au contexte de contraintes</li>
+        <li>Sortie plan A / plan B</li>
+      </ol>
+      <h3>Out-scope V1</h3>
+      <ul>
+        <li>Booking end-to-end</li>
+        <li>Feed inspiration social</li>
+        <li>Géoloc continue par défaut</li>
+      </ul>
+      <p class="small">Base de design: synthèses TASK-131 et claims C-121 à C-123.</p>
+    </section>
+
+    <section id="business-model">
+      <h2>4) Modèle business et monétisation</h2>
+      <p>Trajectoire recommandée: <strong>V1 freemium + affiliation contextuelle</strong>, puis premium en montée, sponsorisation POI uniquement après validation trust<span class="inline-ref">[<a href="#r8">R8</a>]</span>.</p>
+      <p>La stratégie reste conditionnée par des tests terrain sur CTR/CVR/churn et perception de biais commercial<span class="inline-ref">[<a href="#r9">R9</a>]</span>.</p>
+    </section>
+
+    <section id="faisabilite-conformite">
+      <h2>5) Faisabilité technique et conformité</h2>
+      <ul>
+        <li>Collaboration realtime: faisable (Supabase/Firebase patterns documentés)<span class="inline-ref">[<a href="#r10">R10</a>]</span>.</li>
+        <li>Telegram-first: voie d’intégration pragmatique en V1<span class="inline-ref">[<a href="#r11">R11</a>]</span>.</li>
+        <li>Conformité localisation: opt-in explicite, retrait simple, mode borné uniquement<span class="inline-ref">[<a href="#r12">R12</a>]</span>.</li>
+      </ul>
+    </section>
+
+    <section id="risques">
+      <h2>6) Risques majeurs</h2>
+      <ol>
+        <li>Commoditisation IA si perte du wedge.</li>
+        <li>Friction onboarding si QCM surchargé.</li>
+        <li>Perte de confiance si densité commerciale trop tôt.</li>
+        <li>Risque policy/privacy si géoloc élargie sans garde-fous.</li>
+      </ol>
+    </section>
+
+    <section id="hypotheses">
+      <h2>7) Hypothèses critiques à valider</h2>
+      <ul>
+        <li>A-105: friction QCM acceptable vs valeur perçue</li>
+        <li>A-106: acceptation géoloc bornée</li>
+        <li>A-107: valeur exécution Telegram-first</li>
+        <li>A-109: hybride freemium+affiliation monétise tôt sans casser la confiance</li>
+        <li>A-110: seuil de sponsorisation acceptable</li>
+      </ul>
+    </section>
+
+    <section id="decision">
+      <h2>8) Décision et gates du POC</h2>
+      <p><strong>Décision: GO POC 8 semaines</strong>, avec revue go/no-go stricte.</p>
+      <h3>KPI gates</h3>
+      <ul>
+        <li>Activation ≥35% des groupes avec shortlist partagée</li>
+        <li>Collaboration ≥60% des groupes avec ≥2 participants actifs</li>
+        <li>Signal monétisation: CTR affilié utile (8–12%) <em>[À VÉRIFIER]</em></li>
+        <li>Satisfaction: signal majoritaire de gain de temps</li>
+      </ul>
+      <p>Règle: ≥3/4 KPI = GO phase 2; sinon NO-GO/pivot.</p>
+    </section>
+
+    <section id="references">
+      <h2>9) Références</h2>
+      <ol class="refs">
+        <li id="r1"><strong>R1 — C-101/C-103/C-110/C-118 (SOURCE-REGISTRY)</strong>: artefact primaire montrant la fragmentation des contraintes et la charge d’orchestration. Source: <code>opportunity/SOURCE-REGISTRY.yaml</code>.</li>
+        <li id="r2"><strong>R2 — C-117/C-120</strong>: verdict stratégique « wedge constraint-first + collaboration », condition de poursuite produit. Source: <code>opportunity/SOURCE-REGISTRY.yaml</code>.</li>
+        <li id="r3"><strong>R3 — C-102/C-109</strong>: segment famille comme lead segment le plus robuste. Source: <code>opportunity/SOURCE-REGISTRY.yaml</code>.</li>
+        <li id="r4"><strong>R4 — C-111</strong>: segment secondaire groupes d’amis (coordination). Source: <code>opportunity/SOURCE-REGISTRY.yaml</code>.</li>
+        <li id="r5"><strong>R5 — C-113</strong>: positionnement concurrents planning. Sources vérifiées accessibles: <a href="https://www.sygic.com/travel">sygic.com/travel</a>, <a href="https://roadtrippers.com">roadtrippers.com</a>. (Wanderlog signalé indisponible lors de l’audit du 2026-04-10.)</li>
+        <li id="r6"><strong>R6 — C-114</strong>: substituts maps. Sources: <a href="https://www.google.com/maps">google.com/maps</a>, <a href="https://maps.me">maps.me</a>.</li>
+        <li id="r7"><strong>R7 — C-116</strong>: risque substitution IA conversationnelle. Sources: <a href="https://chatgpt.com">chatgpt.com</a>, <a href="https://guidegeek.com">guidegeek.com</a>.</li>
+        <li id="r8"><strong>R8 — C-134/C-135/C-136/C-138</strong>: faisabilité affiliation + contraintes store billing. Sources: <a href="https://partner.getyourguide.com/">GetYourGuide Partner</a>, <a href="https://support.google.com/googleplay/android-developer/answer/9858738?hl=en">Google Play Billing</a>, <a href="https://developer.apple.com/app-store/review/guidelines/#payments">Apple Payments Guidelines</a>, <a href="https://www.trivago.com/advertising">trivago advertising</a>.</li>
+        <li id="r9"><strong>R9 — A-109/A-110</strong>: hypothèses de confiance et performance commerciale à valider en pilote. Source: <code>opportunity/ASSUMPTIONS.md</code>.</li>
+        <li id="r10"><strong>R10 — C-124/C-125</strong>: patterns realtime collaboration. Sources: <a href="https://supabase.com/docs/guides/realtime">Supabase Realtime</a>, <a href="https://firebase.google.com/docs/firestore/real-time_queries_at_scale">Firestore real-time queries at scale</a>.</li>
+        <li id="r11"><strong>R11 — C-130/C-131</strong>: faisabilité intégrations Telegram/WhatsApp sandbox. Sources: <a href="https://core.telegram.org/bots/api">Telegram Bot API</a>, <a href="https://www.twilio.com/docs/whatsapp/tutorial/send-and-receive-media-messages-whatsapp-nodejs">Twilio WhatsApp</a>.</li>
+        <li id="r12"><strong>R12 — C-126/C-127/C-128/C-129</strong>: contraintes privacy/policy sur la géolocalisation. Sources: <a href="https://developer.apple.com/documentation/corelocation/handling-location-updates-in-the-background">Apple CoreLocation</a>, <a href="https://support.google.com/googleplay/android-developer/answer/9799150?hl=en">Google Play background location</a>, <a href="https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/legal-grounds-processing-data/grounds-processing/what-if-somebody-withdraws-their-consent_en">EU consent withdrawal</a>, <a href="https://www.eff.org/issues/location-privacy">EFF location privacy</a>.</li>
+      </ol>
+      <p class="small">Traçabilité complète: <a href="opportunity/SOURCE-REGISTRY.yaml">SOURCE-REGISTRY.yaml</a>, <a href="opportunity/sources-verified.md">sources-verified.md</a>, <a href="opportunity/WHITEPAPER-V1.md">WHITEPAPER-V1.md</a>.</p>
+    </section>
+  </main>
+</body>
+</html>
