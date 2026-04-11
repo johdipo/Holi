@@ -1,1 +1,70 @@
-<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Holi — Decision Package Deep v3</title><style>body{font-family:Inter,Arial,sans-serif;max-width:860px;margin:30px auto;padding:0 16px;line-height:1.6}code{background:#f2f4f7;padding:2px 6px;border-radius:6px}</style></head><body><h1>Holi — Decision Package (Deep v3)</h1><p><strong>Décision explicite:</strong> GO POC conditionnel (8 semaines)</p><h2>Conditions de continuation</h2><ol><li>G1 Activation Deep en vert (<code>&gt;=12%</code>) ou trajectoire robuste vers vert.</li><li>G2 D30 activés en zone GO (<code>&gt;=25%</code>); zone <code>20–25%</code> = HOLD.</li><li>G3 <code>CM_s &gt; 0</code> stable sur cohortes comparables.</li><li>G4 trust/compliance sans dérive persistante.</li></ol><h2>Kill-switch / NO-SCALE</h2><ul><li>Activation Deep <code>&lt;10%</code> persistant</li><li>D30 activés <code>&lt;20%</code> persistant</li><li><code>CM_s &lt;=0</code> persistant</li><li>Incident trust/compliance critique non corrigé</li><li>Deux gates rouges simultanés</li></ul><p><a href='whitepaper-deep-v3.html'>Open Deep v3 whitepaper</a> · <a href='index.html'>Back to deliverables</a></p></body></html>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Holi — Decision Package Deep v3</title>
+  <style>
+    :root{--fg:#101828;--line:#e4e7ec;--bg:#fff;--panel:#f8f9fc;--link:#0b5bd3}
+    body{font-family:Inter,Arial,sans-serif;max-width:980px;margin:24px auto;padding:0 16px;line-height:1.6;color:var(--fg);background:var(--bg)}
+    a{color:var(--link)}
+    .topnav,.toc{display:flex;gap:12px;flex-wrap:wrap;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+    .topnav{margin:12px 0}
+    .section{border-top:1px solid var(--line);padding-top:14px;margin-top:10px}
+    .src-summary{margin-top:10px;padding:10px 12px;background:#fbfcff;border:1px dashed #b9ccff;border-radius:8px}
+    code{background:#f2f4f7;padding:2px 6px;border-radius:6px}
+    sup a{text-decoration:none;font-size:11px}
+  </style>
+</head>
+<body>
+  <h1>Holi — Decision Package (Deep v3)</h1>
+  <p><strong>Décision explicite:</strong> GO POC conditionnel (8 semaines)<sup><a href="#src-a">[a]</a></sup>.</p>
+
+  <div class="topnav">
+    <a href="whitepaper-deep-v3.html">Open Deep v3 whitepaper</a>
+    <a href="index.html">Back to deliverables</a>
+  </div>
+
+  <nav class="toc" aria-label="Table des matières">
+    <strong>Table des matières</strong>
+    <a href="#c1">1. Conditions de continuation</a>
+    <a href="#c2">2. Kill-switch / NO-SCALE</a>
+  </nav>
+
+  <section id="c1" class="section">
+    <h2>1) Conditions de continuation</h2>
+    <ol>
+      <li>G1 Activation Deep en vert (<code>&gt;=12%</code>) ou trajectoire robuste vers vert<sup><a href="#src-b">[b]</a></sup>.</li>
+      <li>G2 D30 activés en zone GO (<code>&gt;=25%</code>); zone <code>20–25%</code> = HOLD<sup><a href="#src-b">[b]</a></sup>.</li>
+      <li>G3 <code>CM_s &gt; 0</code> stable sur cohortes comparables<sup><a href="#src-b">[b]</a></sup>.</li>
+      <li>G4 trust/compliance sans dérive persistante<sup><a href="#src-b">[b]</a></sup>.</li>
+    </ol>
+    <div class="src-summary">
+      <strong>Résumé des sources — section 1</strong>
+      <ul>
+        <li id="src-a">[a] Décision consolidée issue Pass3/Pass4.</li>
+        <li id="src-b">[b] Seuils canoniques harmonisés (G1..G4).</li>
+        <li>URL vérifiée: <a href="https://holi.dpdp.ch/whitepaper-deep-v3.html">holi.dpdp.ch/whitepaper-deep-v3.html</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="c2" class="section">
+    <h2>2) Kill-switch / NO-SCALE</h2>
+    <ul>
+      <li>Activation Deep <code>&lt;10%</code> persistant.</li>
+      <li>D30 activés <code>&lt;20%</code> persistant.</li>
+      <li><code>CM_s &lt;=0</code> persistant.</li>
+      <li>Incident trust/compliance critique non corrigé.</li>
+      <li>Deux gates rouges simultanés.</li>
+    </ul>
+    <div class="src-summary">
+      <strong>Résumé des sources — section 2</strong>
+      <ul>
+        <li>Base: anti-thèse transversale + stress tests chiffrés (Pass3).</li>
+        <li>URL vérifiée: <a href="https://holi.dpdp.ch/decision-package-deep-v3.html">holi.dpdp.ch/decision-package-deep-v3.html</a></li>
+      </ul>
+    </div>
+  </section>
+</body>
+</html>

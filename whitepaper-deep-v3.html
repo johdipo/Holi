@@ -1,58 +1,150 @@
-<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Holi — Whitepaper Deep v3</title><style>body{font-family:Inter,Arial,sans-serif;max-width:980px;margin:28px auto;padding:0 16px;line-height:1.6;color:#101828}a{color:#0b5bd3}.topnav{display:flex;gap:12px;flex-wrap:wrap;padding:10px 14px;border:1px solid #e4e7ec;border-radius:10px;background:#f8f9fc;margin-bottom:18px}.muted{color:#667085}.callout{border-left:4px solid #0b5bd3;padding:10px 12px;background:#eef4ff;border-radius:6px}code{background:#f2f4f7;padding:2px 6px;border-radius:6px}</style></head><body>
-<h1>Holi — Whitepaper Deep v3</h1>
-<p class='muted'>Pass4 finalisation: narration décisionnelle + QA URLs + package publication (TASK-170).</p>
-<div class='topnav'>
-<a href='index.html'>← Deliverables index</a>
-<a href='decision-package-deep-v3.html'>Open Decision package v3</a>
-<a href='whitepaper-deep-v2.html'>Open Deep v2 (archive)</a>
-</div>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Holi — Whitepaper Deep v3</title>
+  <style>
+    :root{--fg:#101828;--muted:#667085;--line:#e4e7ec;--bg:#fff;--panel:#f8f9fc;--link:#0b5bd3}
+    body{font-family:Inter,Arial,sans-serif;max-width:1100px;margin:24px auto;padding:0 16px;line-height:1.6;color:var(--fg);background:var(--bg)}
+    a{color:var(--link)}
+    .topnav,.toc{display:flex;gap:12px;flex-wrap:wrap;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+    .topnav{margin-bottom:14px}
+    .muted{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1fr;gap:14px}
+    @media(min-width:980px){.grid{grid-template-columns:260px 1fr}.toc{position:sticky;top:12px;align-self:start}}
+    .toc a{font-size:14px;text-decoration:none}
+    .section{border-top:1px solid var(--line);padding-top:16px;margin-top:12px}
+    .callout{border-left:4px solid var(--link);padding:10px 12px;background:#eef4ff;border-radius:6px}
+    .src-summary{margin-top:10px;padding:10px 12px;background:#fbfcff;border:1px dashed #b9ccff;border-radius:8px}
+    .src-summary h4{margin:0 0 6px 0;font-size:14px}
+    .src-summary ul{margin:6px 0 0 18px}
+    code{background:#f2f4f7;padding:2px 6px;border-radius:6px}
+    sup a{text-decoration:none;font-size:11px}
+  </style>
+</head>
+<body>
+  <h1>Holi — Whitepaper Deep v3</h1>
+  <p class="muted">Version navigation style Nomad: TOC stable, sources en exposant, résumés de sources par section (TASK-171).</p>
 
-<h2>Executive summary</h2>
-<p>Holi reste une option conditionnelle: <strong>GO POC conditionnel</strong> oui, mais pas de scale narratif. Le scale n'est autorisé qu'en convergence mesurable des gates produit, rétention, économie et trust/compliance.</p>
+  <div class="topnav">
+    <a href="index.html">← Deliverables index</a>
+    <a href="decision-package-deep-v3.html">Decision package v3</a>
+    <a href="whitepaper-deep-v2.html">Deep v2 (archive)</a>
+  </div>
 
-<h2>Gates canoniques</h2>
-<ul>
-<li><strong>G1 Activation Deep</strong>: rouge <code>&lt;10%</code>, orange <code>10–12%</code>, vert <code>&gt;=12%</code>.</li>
-<li><strong>G2 D30 activés</strong>: rouge <code>&lt;20%</code>, HOLD <code>20–25%</code>, GO <code>&gt;=25%</code>.</li>
-<li><strong>G3 CM_s</strong>: rouge <code>&lt;=0</code> persistant, vert <code>&gt;0</code> stable.</li>
-<li><strong>G4 Trust/compliance</strong>: rouge en dérive persistante ou incident critique.</li>
-</ul>
+  <div class="grid">
+    <nav class="toc" aria-label="Table des matières">
+      <strong>Table des matières</strong>
+      <a href="#s1">1. Executive summary</a>
+      <a href="#s2">2. Gates canoniques</a>
+      <a href="#s3">3. Décisions de sortie</a>
+      <a href="#s4">4. Plan 8 semaines</a>
+      <a href="#s5">5. Risques restants</a>
+      <a href="#s6">6. Références globales</a>
+    </nav>
 
-<h2>Décisions de sortie</h2>
-<ul>
-<li><strong>GO-SCALE limité</strong>: G1 vert + G2 GO + G3 vert + G4 vert.</li>
-<li><strong>HOLD-OPTIMIZE</strong>: mix vert/orange sans rouge critique.</li>
-<li><strong>NO-SCALE</strong>: rouge critique persistant ou 2 rouges simultanés.</li>
-</ul>
+    <main>
+      <section id="s1" class="section">
+        <h2>1) Executive summary</h2>
+        <p>Holi reste une option conditionnelle: <strong>GO POC conditionnel</strong> oui, mais pas de scale narratif. Le scale n'est autorisé qu'en convergence mesurable des gates produit, rétention, économie et trust/compliance<sup><a href="#src-1">[1]</a></sup>.</p>
+        <div class="src-summary">
+          <h4>Résumé des sources — section 1</h4>
+          <ul>
+            <li><strong>Claim clé:</strong> décision pilotée par gates mesurables.</li>
+            <li><strong>Source:</strong> artefacts Deep v3 Pass2/Pass3/Pass4 (synthèse publiée).</li>
+            <li><strong>URL vérifiée:</strong> <a id="src-1" href="https://holi.dpdp.ch/decision-package-deep-v3.html">holi.dpdp.ch/decision-package-deep-v3.html</a></li>
+          </ul>
+        </div>
+      </section>
 
-<div class='callout'><strong>Règle Pass4:</strong> toute valeur non observée terrain reste marquée <code>[À VÉRIFIER]</code>. Toute recommandation doit afficher l'état G1..G4 avant le récit.</div>
+      <section id="s2" class="section">
+        <h2>2) Gates canoniques</h2>
+        <ul>
+          <li><strong>G1 Activation Deep</strong>: rouge <code>&lt;10%</code>, orange <code>10–12%</code>, vert <code>&gt;=12%</code><sup><a href="#src-2">[2]</a></sup>.</li>
+          <li><strong>G2 D30 activés</strong>: rouge <code>&lt;20%</code>, HOLD <code>20–25%</code>, GO <code>&gt;=25%</code><sup><a href="#src-2">[2]</a></sup>.</li>
+          <li><strong>G3 CM_s</strong>: rouge <code>&lt;=0</code> persistant, vert <code>&gt;0</code> stable<sup><a href="#src-2">[2]</a></sup>.</li>
+          <li><strong>G4 Trust/compliance</strong>: rouge en dérive persistante ou incident critique<sup><a href="#src-2">[2]</a></sup>.</li>
+        </ul>
+        <div class="src-summary">
+          <h4>Résumé des sources — section 2</h4>
+          <ul>
+            <li><strong>Claim clé:</strong> seuils canoniques harmonisés cross-sections.</li>
+            <li><strong>Source:</strong> package décision Deep v3 et Pass2 harmonisation.</li>
+            <li><strong>URL vérifiée:</strong> <a id="src-2" href="https://holi.dpdp.ch/decision-package-deep-v3.html">holi.dpdp.ch/decision-package-deep-v3.html</a></li>
+          </ul>
+        </div>
+      </section>
 
-<h2>Plan 8 semaines</h2>
-<ol>
-<li>S1–S2: instrumentation + onboarding groupe.</li>
-<li>S3–S4: optimisation Activation Deep.</li>
-<li>S5–S6: stabilisation D30 cohortes activées.</li>
-<li>S7–S8: validation CM_s + décision GO/HOLD/NO-SCALE finale.</li>
-</ol>
+      <section id="s3" class="section">
+        <h2>3) Décisions de sortie</h2>
+        <ul>
+          <li><strong>GO-SCALE limité</strong>: G1 vert + G2 GO + G3 vert + G4 vert<sup><a href="#src-3">[3]</a></sup>.</li>
+          <li><strong>HOLD-OPTIMIZE</strong>: mix vert/orange sans rouge critique<sup><a href="#src-3">[3]</a></sup>.</li>
+          <li><strong>NO-SCALE</strong>: rouge critique persistant ou 2 rouges simultanés<sup><a href="#src-3">[3]</a></sup>.</li>
+        </ul>
+        <div class="callout"><strong>Règle Pass4:</strong> toute valeur non observée terrain reste marquée <code>[À VÉRIFIER]</code>. Toute recommandation doit afficher l'état G1..G4 avant le récit.</div>
+        <div class="src-summary">
+          <h4>Résumé des sources — section 3</h4>
+          <ul>
+            <li><strong>Claim clé:</strong> cadre GO/HOLD/NO-SCALE fondé sur signaux observables.</li>
+            <li><strong>Source:</strong> Pass3 stress tests + decision package.</li>
+            <li><strong>URL vérifiée:</strong> <a id="src-3" href="https://holi.dpdp.ch/decision-package-deep-v3.html">holi.dpdp.ch/decision-package-deep-v3.html</a></li>
+          </ul>
+        </div>
+      </section>
 
-<h2>Risques restants</h2>
-<ul>
-<li>Paramètres clés encore <code>[À VÉRIFIER]</code> sur données terrain.</li>
-<li>Saisonnalité potentiellement sous-observée sur fenêtre courte.</li>
-<li>Risque de faux signal si lecture hors cohortes activées strictes.</li>
-</ul>
+      <section id="s4" class="section">
+        <h2>4) Plan 8 semaines</h2>
+        <ol>
+          <li>S1–S2: instrumentation + onboarding groupe.</li>
+          <li>S3–S4: optimisation Activation Deep.</li>
+          <li>S5–S6: stabilisation D30 cohortes activées.</li>
+          <li>S7–S8: validation CM_s + décision GO/HOLD/NO-SCALE finale.</li>
+        </ol>
+        <div class="src-summary">
+          <h4>Résumé des sources — section 4</h4>
+          <ul>
+            <li><strong>Claim clé:</strong> séquencement exécutable en 8 semaines.</li>
+            <li><strong>Source:</strong> whitepaper Deep v3 + package décision.</li>
+            <li><strong>URL vérifiée:</strong> <a id="src-4" href="https://holi.dpdp.ch/whitepaper-deep-v3.html">holi.dpdp.ch/whitepaper-deep-v3.html</a></li>
+          </ul>
+        </div>
+      </section>
 
-<h2>Références URL (auditables)</h2>
-<ul>
-<li><a href='https://wanderlog.com'>wanderlog.com</a></li>
-<li><a href='https://www.sygic.com/travel'>sygic.com/travel</a></li>
-<li><a href='https://roadtrippers.com'>roadtrippers.com</a></li>
-<li><a href='https://www.google.com/maps'>google.com/maps</a></li>
-<li><a href='https://maps.me'>maps.me</a></li>
-<li><a href='https://www.lonelyplanet.com'>lonelyplanet.com</a></li>
-<li><a href='https://www.alltrails.com'>alltrails.com</a></li>
-<li><a href='https://chatgpt.com'>chatgpt.com</a></li>
-<li><a href='https://guidegeek.com'>guidegeek.com</a></li>
-<li><a href='https://supabase.com/docs/guides/realtime'>supabase realtime docs</a></li>
-</ul>
-</body></html>
+      <section id="s5" class="section">
+        <h2>5) Risques restants</h2>
+        <ul>
+          <li>Paramètres clés encore <code>[À VÉRIFIER]</code> sur données terrain.</li>
+          <li>Saisonnalité potentiellement sous-observée sur fenêtre courte.</li>
+          <li>Risque de faux signal si lecture hors cohortes activées strictes.</li>
+        </ul>
+        <div class="src-summary">
+          <h4>Résumé des sources — section 5</h4>
+          <ul>
+            <li><strong>Claim clé:</strong> risque principal = sur-interprétation hors cadre cohortes.</li>
+            <li><strong>Source:</strong> anti-thèse transversale + stress tests.</li>
+            <li><strong>URL vérifiée:</strong> <a id="src-5" href="https://holi.dpdp.ch/decision-package-deep-v3.html">holi.dpdp.ch/decision-package-deep-v3.html</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="s6" class="section">
+        <h2>6) Références globales (auditables)</h2>
+        <ul>
+          <li><a href="https://wanderlog.com">wanderlog.com</a></li>
+          <li><a href="https://www.sygic.com/travel">sygic.com/travel</a></li>
+          <li><a href="https://roadtrippers.com">roadtrippers.com</a></li>
+          <li><a href="https://www.google.com/maps">google.com/maps</a></li>
+          <li><a href="https://maps.me">maps.me</a></li>
+          <li><a href="https://www.lonelyplanet.com">lonelyplanet.com</a></li>
+          <li><a href="https://www.alltrails.com">alltrails.com</a></li>
+          <li><a href="https://chatgpt.com">chatgpt.com</a></li>
+          <li><a href="https://guidegeek.com">guidegeek.com</a></li>
+          <li><a href="https://supabase.com/docs/guides/realtime">supabase realtime docs</a></li>
+        </ul>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
